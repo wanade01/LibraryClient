@@ -18,7 +18,6 @@ interface WeatherForecast {
 })
 export class FetchDataComponent {
   public forecasts: WeatherForecast[] = [];
-  baseUrl = "http://localhost:40080/api/";
 
   constructor(private http: HttpClient) {}
   ngOnInit() {
@@ -26,7 +25,7 @@ export class FetchDataComponent {
   }
 
   getForecasts() {
-    this.http.get<WeatherForecast[]>(this.baseUrl + 'weatherforecast').subscribe(
+    this.http.get<WeatherForecast[]>(environment.baseUrl + 'api/WeatherForecast').subscribe(
       (result) => {
         this.forecasts = result;
       },

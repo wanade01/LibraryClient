@@ -1,0 +1,39 @@
+<h1 id="tableLabel">List of Books</h1>
+
+<p>This component demonstrates fetching data from the server.</p>
+@if(!librarian)
+{
+    <p><em>Loading...</em></p>
+}
+
+@else
+{
+    <table>
+        <thead>
+            <tr>
+                <th>Book ID</th>
+                <th>ISBN 13</th>
+                <th>ISBN 10</th>
+                <th>Title</th>
+                <th>Author</th>
+                <th>Publisher</th>
+                <th>Year Published</th>
+                <th>Genre</th>
+            </tr>
+        </thead>
+        <tbody>
+            @for(librarian of librarian; track $index){
+            <tr>
+                <td>{{ librarian.bookId}}</td>
+                <td>{{ librarian.bookIsbn13 }}</td>
+                <td>{{ librarian.bookIsbn10 }}</td>
+                <td>{{ librarian.bookTitle}}</td>
+                <td>{{ librarian.bookAuthor}}</td>
+                <td>{{ librarian.bookPublisher }}</td>
+                <td>{{ librarian.bookPublishYear }}</td>
+                <td>{{ librarian.bookGenre }}</td>
+            </tr>
+        }
+        </tbody>
+    </table>
+}
