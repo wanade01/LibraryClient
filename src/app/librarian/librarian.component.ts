@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { environment } from '../../environments/environment.development';
 import { Librarian } from './librarian';
@@ -10,7 +10,7 @@ import { Librarian } from './librarian';
   templateUrl: './librarian.component.html',
   styleUrl: './librarian.component.css'
 })
-export class LibrarianComponent {
+export class LibrarianComponent implements OnInit{
   public librarian: Librarian[] = [];
 
   constructor(private http: HttpClient) {}

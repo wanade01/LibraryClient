@@ -9,5 +9,14 @@
         <a mat-flat-button color="primary" [routerLink]="['/librarian']">Librarian</a>
         <span class="separator"></span>
         <a mat-flat-button color="primary" [routerLink]="['/patron']">Patron</a>
+        <span class="seperator"></span>
+
+        @if (isLoggedIn){
+          <a mat-flat-button color="primary" (click)="onLogout()">Logout</a>
+        }
+
+        @else {
+          <a mat-flat-button color="primary" [routerLink]="['/login']">Login</a>
+        }
     </mat-toolbar>
   </header> 
