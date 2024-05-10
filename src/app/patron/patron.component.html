@@ -1,6 +1,6 @@
 <h1 id="tableLabel">List of Patrons</h1>
 
-<p>This component demonstrates fetching data from the server.</p>
+<p>Here are the current patrons of this library. Click on the Checked Out Book ID to see what the patron is reading.</p>
 @if(!patron)
 {
     <p><em>Loading...</em></p>
@@ -25,7 +25,7 @@
                 <td>{{ patron.patronFname}}</td>
                 <td>{{ patron.patronLname}}</td>
                 <td>{{ patron.patronAddress}}</td>
-                <td>{{ patron.patronCheckedBookId}}</td>
+                <td><a [routerLink]="['/book', patron.patronCheckedBookId]">{{patron.patronCheckedBookId}}</a></td>
             </tr>
         }
         </tbody>

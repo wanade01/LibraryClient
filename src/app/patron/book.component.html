@@ -1,0 +1,13 @@
+<h1>About Book</h1>
+
+<div class = "BookDisplay">
+    <p><b>ISBN 13: </b> {{book?.bookIsbn13}}</p> 
+    <p><b>ISBN 10: </b> {{book?.bookIsbn10}}</p> 
+    <p><b>Title: </b> {{book?.bookTitle}}</p> 
+    <p><b>Author: </b> {{book?.bookAuthor}}</p> 
+    <p><b>Publisher: </b> {{book?.bookPublisher}}</p> 
+    <p><b>Year Published: </b>{{book?.bookPublishYear}}</p> 
+    <p><b>Genre: </b> {{book?.bookGenre}}</p> 
+    <button mat-raised-button color="secondary" [routerLink]="['/patron']">Back</button>
+</div>
+

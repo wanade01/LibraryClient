@@ -2,11 +2,14 @@ import { Component } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { environment } from '../../environments/environment.development';
 import { Patron } from './patron';
+import { RouterLink } from '@angular/router';
+import { BookComponent } from './book.component';
+import { Book } from './book';
 
 @Component({
   selector: 'app-patron',
   standalone: true,
-  imports: [],
+  imports: [RouterLink, BookComponent],
   templateUrl: './patron.component.html',
   styleUrl: './patron.component.css'
 })

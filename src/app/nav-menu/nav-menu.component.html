@@ -3,12 +3,10 @@
         <button mat-icon-button [routerLink]="['/']">
           <mat-icon>home</mat-icon>
         </button>
-        
-        <a mat-flat-button color="primary" [routerLink]="['/fetch-data']">Fetch Data</a>
-        <span class="separator"></span>
-        <a mat-flat-button color="primary" [routerLink]="['/librarian']">Librarian</a>
-        <span class="separator"></span>
+        <a mat-flat-button color="primary" [routerLink]="['/librarian']">Library</a>
         <a mat-flat-button color="primary" [routerLink]="['/patron']">Patron</a>
+        <span class="separator"></span>
+
         <span class="seperator"></span>
 
         @if (isLoggedIn){

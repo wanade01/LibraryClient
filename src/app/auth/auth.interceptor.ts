@@ -16,7 +16,6 @@ export const authInterceptor: HttpInterceptorFn = (req, next) => {
       }
     });
     return next(newReq);
-    console.log(authToken);
   }
   return next(req).pipe(
     catchError((error) => {

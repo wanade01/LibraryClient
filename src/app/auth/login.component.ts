@@ -14,7 +14,7 @@ import { LoginResult } from './login-result';
     MatFormFieldModule,
     MatInputModule,
     ReactiveFormsModule,
-    RouterLink
+    RouterLink,
   ],
   templateUrl: './login.component.html',
   styleUrl: './login.component.scss'
@@ -51,6 +51,7 @@ ngOnInit(): void {
         if(error.status == 401)
           {
             loginRequest = error.error;
+            this.authService.logout();
           }
       }});
   }

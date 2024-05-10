@@ -6,3 +6,7 @@ th, td
     padding-left: 1rem;
     padding-right: 1rem;
 }
+
+tr:nth-child(even) {
+    background-color: #e0d5de;
+ }
