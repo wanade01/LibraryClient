@@ -38,7 +38,6 @@ ngOnInit(): void {
     this.authService.login(loginRequest).subscribe(
     {
       next: result => {
-        console.log(result.message);
         this.loginResult = result;
         if(result.success){
           localStorage.setItem(this.authService.tokenKey,result.token);

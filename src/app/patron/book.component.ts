@@ -2,7 +2,7 @@ import { HttpClient } from '@angular/common/http';
 import { Component, OnInit, inject } from '@angular/core';
 import { ActivatedRoute, RouterLink } from '@angular/router';
 import { Book } from './book';
-import { environment } from '../../environments/environment.development';
+import { environment } from '../../environments/environment';
 import {MatTableModule} from '@angular/material/table';
 import { Observable, map, tap } from 'rxjs';
 import { NgIf } from '@angular/common';
@@ -32,7 +32,6 @@ export class BookComponent implements OnInit{
   this.id = idParam ? +idParam : -1;
   this.http.get(`${environment.baseUrl}api/Books/${this.id}`)
   .subscribe((res: any) => {
-    console.log(res);
     this.book = res;
   }
     );

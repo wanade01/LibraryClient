@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { environment } from '../../environments/environment.development';
+import { environment } from '../../environments/environment';
 import { Patron } from './patron';
 import { RouterLink } from '@angular/router';
 import { BookComponent } from './book.component';
